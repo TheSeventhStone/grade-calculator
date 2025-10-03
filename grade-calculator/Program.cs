@@ -12,7 +12,7 @@ namespace grade_calculator
             String studentName;
             studentName = "Samuel LaMere";
             int[] grades = { 100, 92, 87, 200, -20, 52, 82, 75, 67, 88 };
-            Console.WriteLine("Welcome, " + studentName+ "\nHere are your grades: ")
+            Console.WriteLine("Welcome, " + studentName + "\nHere are your grades: ");
             /*iterates through grade array. If grade in range, print letter counterpart.
              Otherwise, mark as out of bounds.*/
             foreach(int i in grades)
@@ -21,6 +21,7 @@ namespace grade_calculator
                 if ((i>=90) && (i<101))
                 {
                     Console.WriteLine("This grade is an A!");
+                    //checks if grade is an 100 (max range). If so, mark as perfect score.
                     if (i == 100)
                     {
                         Console.WriteLine("WOW! A perfect score!");
@@ -42,6 +43,7 @@ namespace grade_calculator
                 {
                     Console.WriteLine("This grade is a F.");
                 }
+                //Catch-all for grades out of bounds.
                 else
                 {
                     Console.WriteLine("This is out of the range of 0-100. How did you even get this grade?");
